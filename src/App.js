@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
+
+//COMPONENTS
+import Navbar from './components/navbar/Navbar';
+import Form from './components/form/Form';
+import List from './components/cards/List';
+
 
 function App() {
+  const [form, setForm] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Form form={form} setForm={setForm}/>
+      <div>
+      <List form={form} setForm={setForm}/>
+    </div>
     </div>
   );
 }

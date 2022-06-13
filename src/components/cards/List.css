@@ -1,0 +1,11 @@
+
+.list-header{
+    background-color: #F98800!important;
+    color: #353F58!important;
+    text-align: center;
+}
+
+.card-img{
+    max-height:250px;
+    object-fit: cover;
+}
